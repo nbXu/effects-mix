@@ -1,0 +1,193 @@
+@charset "utf-8";
+.centerV {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a,
+address,
+article,
+aside,
+audio,
+b,
+body,
+canvas,
+caption,
+center,
+dd,
+div,
+dl,
+dt,
+em,
+embed,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+label,
+nav,
+ol,
+output,
+p,
+q,
+section,
+span,
+ul,
+li,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #555555;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  /*页面缩放 字体至最小值时 还能继续*/
+}
+ol,
+li,
+ul {
+  list-style: none;
+}
+input,
+textarea {
+  outline: 0;
+  resize: none;
+}
+a {
+  text-decoration: none;
+  color: #555555;
+}
+img {
+  display: block;
+  outline: none;
+  border: 0;
+}
+.container {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+.left {
+  float: left!important;
+}
+.right {
+  float: right!important;
+}
+.clear {
+  clear: both;
+}
+.clearFloat {
+  zoom: 1;
+}
+.clearFloat:after {
+  content: '.';
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.allW {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.allW > img {
+  display: block;
+  width: 100%;
+}
+.margin {
+  margin-top: 0.825rem;
+  margin-bottom: 0.825rem;
+}
+.margin-t {
+  margin-top: 1rem;
+}
+.img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 
+ * swiper 样式速写
+ * model 样式的速写
+ */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.tab-btn li {
+  float: left;
+  font-size: 0.825rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+}
+.tab-btn li:last-child {
+  margin-right: 0;
+}
+.tab-p4 li {
+  width: 23.5%;
+  margin-right: 2%;
+}
+.tab-p3 li {
+  width: 32%;
+  margin-right: 2%;
+}
+.tab-p2 li {
+  width: 49%;
+  margin-right: 2%;
+}
+.tab-cd li {
+  background-color: #eee;
+}
+.p {
+  font-size: 0.825rem;
+  line-height: 1.3rem;
+  text-indent: 2em;
+}
+.h6 {
+  font-size: 0.6rem;
+  line-height: 1;
+  color: #888;
+}
+.no-mr {
+  margin-right: 0;
+}
+/*
+ * this is a line between two panels 
+ * the comment and public is ending
+ */
