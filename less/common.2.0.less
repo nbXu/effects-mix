@@ -6,19 +6,19 @@
 }
 
  //预定义 间距 
-.margin(t,@marginT:0.825rem){
+.margin(t,@marginT:1rem){
 	margin-top: @marginT;
 }
-.margin(b,@marginB:0.825rem){
+.margin(b,@marginB:1rem){
 	margin-bottom: @marginB;
 }
-.margin(l,@marginL:0.825rem){
+.margin(l,@marginL:1rem){
 	margin-left: @marginL;
 }
-.margin(r,@marginR:0.825rem){
+.margin(r,@marginR:1rem){
 	margin-right: @marginR;
 }
-.margin(a,@marginT:0.825rem,@marginB:0.825rem){
+.margin(a,@marginT:1rem,@marginB:1rem){
 	margin-top: @marginT;
 	margin-bottom: @marginB;
 }
@@ -29,17 +29,18 @@
   	-webkit-border-radius: @angle; //Safari 和 Chrome 
   	border-radius: @angle; //Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 
 }
-.border-shadow(@X:2px,@Y:2px,@r:1px,@c:#000){
+.border-shadow(@x:2px,@y:2px,@r:1px,@c:#000){
 	-moz-box-shadow: @arguments; //Firefox 
   	-webkit-box-shadow: @arguments; ///* Safari 和 Chrome */
   	box-shadow: @arguments;// /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
 }
 
-.opacity(@n:0.4,@n10:40){
+.opacity(@n:0.4){
 	-moz-opacity:@n;   
     -khtml-opacity:@n;
     opacity: @n;
-	filter:alpha(opacity=@n10);
+    @m:@n*100;
+	filter:alpha(opacity=@m);
 }  
 
 .centerV{
@@ -209,12 +210,8 @@ img{
 .allW{
 	.allW()
 }
-.margin{
-	.margin(a);
-}
-.margin-t{
-	margin-top: 1rem;
-}
+
+
 .img{
 	img{
 		display: block;
@@ -272,7 +269,7 @@ img{
 
 .p{
 	font-size: 0.825rem;
-	line-height: 1.3rem;
+	line-height: 1.35rem;
 	text-indent: 2em;
 }
 .h6{
@@ -289,11 +286,3 @@ img{
  * this is a line between two panels 
  * the comment and public is ending
  */
-
- .nav-bar{
- 	li{
- 	}
- }
-
-
-
