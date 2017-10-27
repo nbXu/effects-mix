@@ -18,17 +18,21 @@
 		this.txt = self.find('ul.tab-txt>li');
 		this.txtBox = self.find('ul.tab-txt');
 		this.length=self.find('ul.tab-btn>li').length;
-		//this.current=1; // 控制当前显示的是哪一个
-
 		this.gdW=this.txtBox.parent().width(); //获取slide的宽度
-
-		console.log(this.gdW);
+		
 
 
 
 		this.init(); //tab 对象调用原型方法
+		var This = this;
+		$(window).resize(function() {
+			This.gdW = This.txtBox.parent().width();
 
-		
+			if (This.opts.effect=='left') {
+				This.layout();
+				This.txtBox.animate({marginLeft: -This.gdW*This.num},0, function() {});
+			}
+		});
 	}
 
 	tab.prototype={
