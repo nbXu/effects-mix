@@ -5,13 +5,12 @@
  */
 (function($){
 	var parameter={
-		effect:"left",
-		current:1,
+		effect:"hide",
+		current:0,
 		eventWays:"click"
 	}
 
 	function tab(self,opts){
-		
 		this.opts=jQuery.extend({},parameter,opts);
 		this.btn = self.find('ul.tab-btn>li');
 		this.btnBox = self.find('ul.tab-btn');
@@ -19,10 +18,6 @@
 		this.txtBox = self.find('ul.tab-txt');
 		this.length=self.find('ul.tab-btn>li').length;
 		this.gdW=this.txtBox.parent().width(); //获取slide的宽度
-		
-
-
-
 		this.init(); //tab 对象调用原型方法
 		var This = this;
 		$(window).resize(function() {
@@ -30,7 +25,7 @@
 
 			if (This.opts.effect=='left') {
 				This.layout();
-				This.txtBox.animate({marginLeft: -This.gdW*This.num},0, function() {});
+				This.txtBox.animate({marginLeft: -This.gdW*This.opts.current},0, function() {});
 			}
 		});
 	}
@@ -111,13 +106,18 @@
 			}else{
 				// 没有就没有 傻吊啊
 			}
-			this.btn.eq(index).addClass('on').siblings().removeClass('on');
-			this.txt.hide(0).eq(index).fadeIn(200);
+			this.btn.eq(this.opts.current).addClass('on').siblings().removeClass('on');
+			this.txt.hide(0).eq(this.opts.current).fadeIn(200);
 			
 		},
 		effect_left:function(index){
-			this.btn.eq(index).addClass('on').siblings().removeClass('on');
-			this.txtBox.stop(true,true).animate({marginLeft: -this.gdW*index},300, function() {});
+			if (index || index==0) {
+				this.opts.current=index
+			}else{
+				// 没有就没有 傻吊啊
+			}
+			this.btn.eq(this.opts.current).addClass('on').siblings().removeClass('on');
+			this.txtBox.stop(true,true).animate({marginLeft: -this.gdW*this.opts.current},300, function() {});
 		},
 		layout:function(){
 			if (this.opts.effect=="left") {
@@ -129,13 +129,12 @@
 					width: this.gdW,
 					float: 'left'
 				});
-
+				this.effect_left()
 			}else{
 				this.effect_default()
 			}
 		}
 	}
-	
 	window.tab = tab;
 })(jQuery)
 
