@@ -184,9 +184,6 @@ img {
  * this is a line between two panels 
  * the comment and public is ending
  */
-.f1-tab .tab-btn {
-  margin-bottom: 0.6rem;
-}
 .f1-tab .tab-btn .on {
   background-color: #5259e9;
   color: #fff;
@@ -198,7 +195,77 @@ img {
   width: 100%;
   margin-bottom: 0.375rem;
 }
+.f1-tab .left li:last-child {
+  margin-bottom: 0;
+}
 .f1-tab .right {
   width: 75%;
   overflow: hidden;
+}
+.f1-marquee li {
+  float: left;
+  width: 6rem;
+}
+.f1-marquee li img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.f1-accordion li {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+.f1-accordion li h2 {
+  border-bottom: 1px #ccc solid;
+  font-size: 14px;
+  font-weight: bold;
+  text-indent: 1em;
+  line-height: 32px;
+  position: relative;
+}
+.f1-accordion li .on {
+  background: url(../images/line_01.jpg);
+  background-size: contain;
+}
+.f1-accordion li h2:after {
+  content: "-";
+  position: absolute;
+  right: 18px;
+  font-weight: bold;
+}
+.f1-accordion li .on:after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+}
+.f1-accordion li p {
+  font-size: 12px;
+  line-height: 20px;
+  text-indent: 2em;
+  padding: 24px 20px;
+}
+.f1-txtMove {
+  height: 2.25rem;
+  overflow: hidden;
+  background-color: #eee;
+}
+.f1-txtMove li {
+  font-size: 0.825rem;
+  line-height: 2.25rem;
+  text-indent: 0.375rem;
+}
+.f1-marqueeTop {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+}
+.f1-marqueeTop li {
+  width: 260px;
+  height: 160px;
+  margin: 0 auto;
+}
+.f1-marqueeTop li img {
+  display: block;
+  width: 100%;
 }
